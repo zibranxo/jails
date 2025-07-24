@@ -1,0 +1,159 @@
+2025-07-24 23:39:01,969 - __main__ - INFO - Starting inference with evaluation
+2025-07-24 23:39:01,975 - __main__ - ERROR - Inference failed: [Errno 2] No such file or directory: 'new_prompts.csv'
+2025-07-24 23:39:48,804 - __main__ - INFO - Starting inference with evaluation
+2025-07-24 23:39:48,804 - __main__ - INFO - Processing 486 prompts
+2025-07-24 23:39:48,804 - stage1_detector - INFO - Loading embedding model: BAAI/bge-small-en-v1.5
+2025-07-24 23:39:48,822 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-07-24 23:39:48,822 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-07-24 23:39:56,231 - stage1_detector - ERROR - Failed to load embedding model: 'Pooling' object is not subscriptable
+2025-07-24 23:39:56,231 - __main__ - ERROR - Inference failed: 'Pooling' object is not subscriptable
+2025-07-24 23:42:14,988 - __main__ - INFO - Starting inference with evaluation
+2025-07-24 23:42:14,988 - __main__ - INFO - Processing 486 prompts
+2025-07-24 23:42:15,004 - stage1_detector - INFO - Loading embedding model: BAAI/bge-small-en-v1.5
+2025-07-24 23:42:15,009 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-07-24 23:42:15,011 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-07-24 23:42:22,378 - stage1_detector - INFO - Embedding model loaded successfully
+2025-07-24 23:42:22,378 - __main__ - ERROR - Inference failed: FAISS index not found: models/stage1_faiss_index.bin
+2025-07-25 00:00:32,824 - __main__ - INFO - Starting inference with evaluation
+2025-07-25 00:00:32,828 - __main__ - INFO - Processing 486 prompts
+2025-07-25 00:00:32,828 - stage1_detector - INFO - Loading embedding model: BAAI/bge-small-en-v1.5
+2025-07-25 00:00:32,828 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-07-25 00:00:32,828 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-07-25 00:00:39,767 - stage1_detector - INFO - Embedding model loaded successfully
+2025-07-25 00:00:39,767 - __main__ - ERROR - Inference failed: FAISS index not found: models/stage1_faiss_index.bin
+2025-07-25 00:07:50,282 - __main__ - INFO - Starting inference with evaluation
+2025-07-25 00:07:50,288 - __main__ - INFO - Processing 486 prompts
+2025-07-25 00:07:50,288 - stage1_detector - INFO - Loading embedding model: BAAI/bge-small-en-v1.5
+2025-07-25 00:07:50,295 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-07-25 00:07:50,295 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-07-25 00:07:57,221 - stage1_detector - INFO - Embedding model loaded successfully
+2025-07-25 00:07:57,244 - stage1_detector - INFO - FAISS index loaded from models/stage1_faiss_index.bin
+2025-07-25 00:07:57,251 - stage2_classifier - INFO - Loading embedding model: BAAI/bge-small-en-v1.5
+2025-07-25 00:07:57,258 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-07-25 00:07:57,259 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-07-25 00:08:02,360 - stage2_classifier - INFO - Embedding model loaded successfully
+2025-07-25 00:08:02,907 - stage2_classifier - INFO - Models loaded from models
+2025-07-25 00:08:03,473 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:03,722 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:04,004 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:04,206 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:04,584 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:04,644 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:04,839 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:04,939 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:05,177 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:06,443 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:06,594 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:06,658 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:06,879 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:07,359 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:07,534 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:08,618 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:08,828 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:08,968 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:09,213 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:09,406 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:09,513 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:09,769 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:09,970 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:10,035 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:10,654 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:10,751 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:10,952 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:11,437 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:11,612 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:11,643 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:11,824 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:12,079 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:12,142 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:12,236 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:12,341 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:12,404 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:12,485 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:12,908 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:12,974 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:13,305 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:13,592 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:13,740 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:14,255 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:14,610 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:15,134 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:15,576 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:16,143 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:16,660 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:16,752 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:16,965 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:08:17,879 - __main__ - INFO - Inference completed: 50/486 jailbreaks detected
+2025-07-25 00:08:17,879 - __main__ - INFO - Results saved to predictions.csv
+2025-07-25 00:09:45,405 - __main__ - INFO - Starting inference with evaluation
+2025-07-25 00:09:45,405 - __main__ - ERROR - Inference failed: [Errno 2] No such file or directory: 'test_prompts.csv'
+2025-07-25 00:11:03,595 - __main__ - INFO - Starting inference with evaluation
+2025-07-25 00:11:03,602 - __main__ - INFO - Processing 486 prompts
+2025-07-25 00:11:03,602 - stage1_detector - INFO - Loading embedding model: BAAI/bge-small-en-v1.5
+2025-07-25 00:11:03,609 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-07-25 00:11:03,610 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-07-25 00:11:10,587 - stage1_detector - INFO - Embedding model loaded successfully
+2025-07-25 00:11:10,614 - stage1_detector - INFO - FAISS index loaded from models/stage1_faiss_index.bin
+2025-07-25 00:11:10,615 - stage2_classifier - INFO - Loading embedding model: BAAI/bge-small-en-v1.5
+2025-07-25 00:11:10,624 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-07-25 00:11:10,624 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-07-25 00:11:14,852 - stage2_classifier - INFO - Embedding model loaded successfully
+2025-07-25 00:11:17,075 - stage2_classifier - INFO - Models loaded from models
+2025-07-25 00:11:17,679 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:17,935 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:18,232 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:18,428 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:18,803 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:18,867 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:19,017 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:19,119 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:19,372 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:20,711 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:20,870 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:20,941 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:21,178 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:21,664 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:21,841 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:23,002 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:23,218 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:23,351 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:23,592 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:23,790 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:23,903 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:24,187 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:24,401 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:24,477 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:25,118 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:25,227 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:25,441 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:25,935 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:26,146 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:26,185 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:26,384 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:26,644 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:26,708 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:26,828 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:26,931 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:27,011 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:27,083 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:27,505 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:27,580 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:27,912 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:28,211 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:28,376 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:28,890 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:29,234 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:29,756 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:30,200 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:30,772 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:31,306 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:31,404 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:31,617 - stage2_classifier - INFO - Extracting features from 1 prompts
+2025-07-25 00:11:32,524 - __main__ - INFO - Inference completed: 50/486 jailbreaks detected
+2025-07-25 00:11:32,529 - __main__ - INFO - Results saved to predictions.csv
+2025-07-25 00:11:32,529 - __main__ - INFO - Running evaluation against ground truth
+2025-07-25 00:11:32,533 - evaluate_predictions - INFO - Evaluating end-to-end system performance
+2025-07-25 00:11:32,534 - evaluate_predictions - INFO - Evaluating Stage 1 binary classification
+2025-07-25 00:11:32,572 - evaluate_predictions - INFO - Evaluating Stage 2 multi-class classification
+2025-07-25 00:11:32,646 - evaluate_predictions - INFO - Detailed metrics saved to detailed_metrics.json
+2025-07-25 00:11:32,648 - evaluate_predictions - INFO - Report saved to evaluation_report.md

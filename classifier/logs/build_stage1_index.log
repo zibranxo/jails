@@ -1,0 +1,18 @@
+2025-07-25 00:04:21,091 - __main__ - INFO - Starting Stage 1 index building
+2025-07-25 00:04:21,091 - __main__ - INFO - Loading data from stage1_data.csv
+2025-07-25 00:04:22,785 - __main__ - ERROR - Index building failed: No harmful prompts found (unsafe=1) in the dataset
+2025-07-25 00:06:11,389 - __main__ - INFO - Starting Stage 1 index building
+2025-07-25 00:06:11,391 - __main__ - INFO - Loading data from stage1_data.csv
+2025-07-25 00:06:11,415 - __main__ - ERROR - Index building failed: CSV must have 'prompt' and 'unsafe' columns
+2025-07-25 00:06:38,557 - __main__ - INFO - Starting Stage 1 index building
+2025-07-25 00:06:38,559 - __main__ - INFO - Loading data from stage1_data.csv
+2025-07-25 00:06:38,605 - __main__ - INFO - Found 6354 harmful prompts for indexing
+2025-07-25 00:06:38,607 - stage1_detector - INFO - Loading embedding model: BAAI/bge-small-en-v1.5
+2025-07-25 00:06:38,613 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-07-25 00:06:38,613 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-07-25 00:06:45,024 - stage1_detector - INFO - Embedding model loaded successfully
+2025-07-25 00:06:45,024 - stage1_detector - INFO - Building FAISS index from 6354 unsafe prompts
+2025-07-25 00:07:23,000 - stage1_detector - INFO - FAISS index built with 6354 vectors of dimension 384
+2025-07-25 00:07:23,009 - stage1_detector - INFO - FAISS index saved to models/stage1_faiss_index.bin
+2025-07-25 00:07:23,010 - __main__ - INFO - Stage 1 index building completed successfully
+2025-07-25 00:07:23,011 - __main__ - INFO - Index saved to: models/stage1_faiss_index.bin

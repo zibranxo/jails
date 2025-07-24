@@ -1,0 +1,38 @@
+# config.yaml
+
+# Stage 1 Configuration
+stage1:
+  embedding_model: "BAAI/bge-small-en-v1.5"
+  faiss_index_path: "models/stage1_faiss_index.bin"
+  similarity_threshold: 0.8
+  k_neighbors: 5
+  regex_patterns:
+    - "(?i)ignore\\s+previous\\s+instructions"
+    - "(?i)pretend\\s+you\\s+are"
+    - "(?i)act\\s+as\\s+if"
+    - "(?i)roleplay\\s+as"
+    - "(?i)forget\\s+everything"
+    - ">>>+"
+    - "(?i)jailbreak"
+    - "(?i)override\\s+safety"
+
+# Stage 2 Configuration
+stage2:
+  pca_components: 50
+  models:
+    random_forest:
+      n_estimators: 100
+      max_depth: 20
+      random_state: 42
+    xgboost:
+      n_estimators: 100
+      max_depth: 6
+      learning_rate: 0.1
+      objective: "multi:softprob"
+      random_state: 42
+
+# General Configuration
+general:
+  random_seed: 42
+  log_level: "INFO"
+  batch_size: 32
