@@ -1,0 +1,19 @@
+python>=3.8
+
+# nlp
+sentence-transformers>=2.2.2
+transformers>=4.30
+torch>=1.10
+
+# ml
+scikit-learn>=1.2
+numpy>=1.21
+scipy>=1.7
+
+# text & Llnguistic Analysis
+nltk>=3.8
+textstat>=0.7.3
+
+# utilities
+joblib>=1.2
+tqdm>=4.64
