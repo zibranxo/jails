@@ -1,4 +1,4 @@
-# 🔐 JAILS: Jailbreak Instruction Leakage Detection System
+# JAILS: Jailbreak Instruction Leakage Detection System
 
 **JAILS** is a hybrid detection system designed to identify **jailbreak and prompt-injection attempts** against Large Language Models (LLMs).
 It combines **semantic similarity, linguistic analysis, pattern-based heuristics, and classical machine-learning models** to detect adversarial prompts beyond simple keyword matching.
@@ -7,7 +7,7 @@ This project focuses on **prompt-level security analysis** and is intended as a 
 
 ---
 
-## 🎯 Problem Overview
+## Problem Overview
 
 LLMs are vulnerable to a wide range of prompt-based attacks, including:
 
@@ -22,7 +22,7 @@ Rule-based filters alone fail to generalize.
 
 ---
 
-## 🏗️ System Architecture
+## System Architecture
 
 ```
 Input Prompt (+ optional context)
@@ -44,9 +44,9 @@ SAFE / JAILBREAK
 
 ---
 
-## ✨ Key Capabilities
+## Key Capabilities
 
-### 🔍 Multi-Layer Detection
+### Multi-Layer Detection
 - Semantic similarity against known jailbreak patterns
 - Linguistic features: repetition, length, structure, readability cues
 - Pattern matching: instruction overrides, role-play triggers, coercion
@@ -62,7 +62,7 @@ SAFE / JAILBREAK
 
 ---
 
-## 🌍 Attack Coverage (Examples)
+## Attack Coverage (Examples)
 
 | Category | Example | Detection Signal |
 |--------|--------|------------------|
@@ -74,7 +74,7 @@ SAFE / JAILBREAK
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```
 jails/
@@ -88,26 +88,7 @@ jails/
 
 ---
 
-## 🚀 Quick Start
-
-### 1️⃣ Installation
-```bash
-pip install -r requirements.txt
-```
-
-### 2️⃣ Run the detector
-```bash
-python flooding2.py
-```
-
-The script demonstrates:
-- Model training
-- Evaluation metrics
-- Sample prompt classification
-
----
-
-## 📈 Model Outputs
+## Model Outputs
 
 For each prompt, JAILS produces:
 - Classification: `SAFE` or `JAILBREAK`
@@ -119,7 +100,7 @@ This makes the system **interpretable**, not a black box.
 
 ---
 
-## 🧠 What This Project Demonstrates
+## What This Project Demonstrates
 
 - Understanding of LLM jailbreak & prompt-injection risks
 - Hybrid detection (rules + ML + statistics)
@@ -129,13 +110,7 @@ This makes the system **interpretable**, not a black box.
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This project is an **experimental prototype** intended for **learning and research purposes**.
-It is **not a production-ready security system**.
 
----
-
-## 📄 License
-
-MIT License
