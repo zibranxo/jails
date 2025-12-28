@@ -1,0 +1,17 @@
+2025-07-24 23:37:28,006 - __main__ - INFO - Starting Stage 2 training
+2025-07-24 23:37:28,006 - data_loader - INFO - Loading Stage 2 data from stage2_data.csv
+2025-07-24 23:37:28,017 - data_loader - INFO - Loaded 1143 samples with 35 unique types: ['disguised_intent', 'role_play', 'structured_response', 'virtual_ai_simulation', 'privilege_escalation', 'thermal_jailbreak', 'context_flooding', 'Harmful Instructions', 'Hate Speech or Discrimination', 'Explicit Content', 'Misinformation', 'Sensitive Information', 'Malware', 'Illegal Activity', 'Hate Speech', 'Physical Harm', 'Economic Harm', 'Fraud', 'Pornography', 'Political Lobbying', 'Privacy Violence', 'Legal Opinion', 'Financial Advice', 'Health Consultation', 'Gov Decision', 'Harassment/Discrimination', 'Malware/Hacking', 'Physical harm', 'Economic harm', 'Fraud/Deception', 'Disinformation', 'Sexual/Adult content', 'Privacy', 'Expert advice', 'Government decision-making']
+2025-07-24 23:37:28,017 - stage2_classifier - INFO - Loading embedding model: BAAI/bge-small-en-v1.5
+2025-07-24 23:37:28,029 - sentence_transformers.SentenceTransformer - INFO - Use pytorch device_name: cpu
+2025-07-24 23:37:28,029 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-en-v1.5
+2025-07-24 23:37:37,285 - stage2_classifier - INFO - Embedding model loaded successfully
+2025-07-24 23:37:37,285 - stage2_classifier - INFO - Training models on 1143 samples
+2025-07-24 23:37:37,285 - stage2_classifier - INFO - Extracting features from 1143 prompts
+2025-07-24 23:37:47,148 - stage2_classifier - INFO - Fitting PCA with 50 components
+2025-07-24 23:37:47,381 - stage2_classifier - INFO - PCA explained variance ratio: 0.695
+2025-07-24 23:37:47,381 - stage2_classifier - INFO - Training on 35 classes: ['Disinformation', 'Economic Harm', 'Economic harm', 'Expert advice', 'Explicit Content', 'Financial Advice', 'Fraud', 'Fraud/Deception', 'Gov Decision', 'Government decision-making', 'Harassment/Discrimination', 'Harmful Instructions', 'Hate Speech', 'Hate Speech or Discrimination', 'Health Consultation', 'Illegal Activity', 'Legal Opinion', 'Malware', 'Malware/Hacking', 'Misinformation', 'Physical Harm', 'Physical harm', 'Political Lobbying', 'Pornography', 'Privacy', 'Privacy Violence', 'Sensitive Information', 'Sexual/Adult content', 'context_flooding', 'disguised_intent', 'privilege_escalation', 'role_play', 'structured_response', 'thermal_jailbreak', 'virtual_ai_simulation']
+2025-07-24 23:37:53,383 - stage2_classifier - INFO - Random Forest validation accuracy: 0.725
+2025-07-24 23:37:53,389 - stage2_classifier - INFO - XGBoost validation accuracy: 0.725
+2025-07-24 23:37:53,406 - stage2_classifier - INFO - Ensemble validation accuracy: 0.742
+2025-07-24 23:37:53,545 - stage2_classifier - INFO - Models saved to models
+2025-07-24 23:37:53,545 - __main__ - INFO - Stage 2 training completed successfully
