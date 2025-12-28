@@ -1,147 +1,141 @@
-# 🔐 JAILS: Jailbreak & Instruction Leakage Detection System
+# 🔐 JAILS: Jailbreak Instruction Leakage Detection System
 
-**JAILS** is a research-oriented **jailbreak / prompt-injection detection system** designed to identify unsafe or adversarial user prompts intended to bypass Large Language Model (LLM) safety mechanisms.
+**JAILS** is a hybrid detection system designed to identify **jailbreak and prompt-injection attempts** against Large Language Models (LLMs).
+It combines **semantic similarity, linguistic analysis, pattern-based heuristics, and classical machine-learning models** to detect adversarial prompts beyond simple keyword matching.
 
-This project was developed as part of an **AIMS-DTU internship / research exploration** and focuses on combining **semantic similarity, linguistic analysis, pattern-based heuristics, and machine learning** for robust detection.
-
----
-
-## 🎯 Problem Statement
-
-Large Language Models are vulnerable to **jailbreak and prompt-injection attacks**, such as:
-
-- Instruction overrides (e.g., “ignore previous rules”)
-- Role-play based safety bypasses
-- Paraphrased or obfuscated attacks that evade keyword filters
-
-Simple rule-based systems fail to generalize.  
-JAILS explores a **hybrid detection approach** that goes beyond keywords.
+This project focuses on **prompt-level security analysis** and is intended as a **research and engineering prototype** for LLM safety exploration.
 
 ---
 
-## 🧠 High-Level Approach
+## 🎯 Problem Overview
 
-JAILS combines multiple detection signals:
+LLMs are vulnerable to a wide range of prompt-based attacks, including:
 
-1. **Semantic similarity** to known jailbreak prompts  
-2. **Linguistic and structural features**  
-3. **Pattern-based heuristics**  
-4. **Supervised machine learning**  
-5. **Anomaly detection**  
+- Instruction overrides (e.g., *“ignore all previous instructions”*)
+- Role-play jailbreaks (e.g., *“act as an unrestricted AI”*)
+- Paraphrased attacks that evade keyword filters
+- Context flooding through repeated adversarial instructions
+- Privilege escalation or authority-based manipulation
 
-The system is model-agnostic and can be deployed as a **pre-filter or guard layer** for LLMs.
-
----
-
-## 🧩 Core Components
-
-### 1️⃣ Semantic Embedding Manager
-- Encodes prompts using transformer-based embeddings  
-- Compares similarity against known **jailbreak** and **safe** prompts  
-- Enables detection of paraphrased attacks  
+Rule-based filters alone fail to generalize.  
+**JAILS** addresses this by aggregating multiple weak signals into a stronger detection decision.
 
 ---
 
-### 2️⃣ Advanced Feature Extractor
+## 🏗️ System Architecture
 
-Extracted feature groups include:
-
-- **Semantic features**: jailbreak similarity, safe similarity, confidence gap  
-- **Linguistic features**: word count, sentence count, readability cues  
-- **Sentiment features**: polarity scores  
-- **Pattern features**: instruction overrides, manipulation phrases  
-
----
-
-### 3️⃣ Jailbreak Detection Engine
-
-The final decision engine:
-- Aggregates extracted features  
-- Uses a **Gradient Boosting classifier**  
-- Applies **Local Outlier Factor (LOF)** for anomaly detection  
-- Falls back to heuristic rules when needed  
-
-Each prompt is classified as:
-- `SAFE`
-- `JAILBREAK`
-
-Along with confidence and threat scores.
-
----
-
-## 🧪 Training & Evaluation
-
-Training samples follow the format:
-
-```python
-(prompt_text, task_intent, label)
+```
+Input Prompt (+ optional context)
+        ↓
+Feature Extraction Layer
+- Linguistic & structural features
+- Pattern-based manipulation signals
+- Statistical text representations
+        ↓
+Detection Engine
+- ML classifier (Gradient Boosting / RF / LR)
+- Anomaly detection (LOF)
+- Rule-based fallback
+        ↓
+Output
+SAFE / JAILBREAK
++ confidence & risk score
 ```
 
-Where:
-- `label = 1` → jailbreak  
-- `label = 0` → safe  
+---
 
-The training pipeline includes:
-- Feature scaling
-- Classifier training
-- Anomaly model fitting
-- Validation metrics (accuracy, AUC)
+## ✨ Key Capabilities
+
+### 🔍 Multi-Layer Detection
+- Semantic similarity against known jailbreak patterns
+- Linguistic features: repetition, length, structure, readability cues
+- Pattern matching: instruction overrides, role-play triggers, coercion
+- Statistical signals: TF-IDF similarity, clustering, anomaly detection
+
+### 🎛️ Machine-Learning Pipeline
+- Feature scaling and preprocessing
+- Supervised classifiers:
+  - Gradient Boosting (primary)
+  - Random Forest / Logistic Regression (baseline comparisons)
+- Local Outlier Factor (LOF) for unseen / zero-day attacks
+- Heuristic fallback when confidence is low
+
+---
+
+## 🌍 Attack Coverage (Examples)
+
+| Category | Example | Detection Signal |
+|--------|--------|------------------|
+| Instruction Override | "Ignore previous rules" | Regex + semantics |
+| Role-Play Jailbreak | "Act as DAN" | Patterns + structure |
+| Context Flooding | Repeated adversarial text | Repetition + anomaly |
+| Privilege Escalation | "Admin override enabled" | Patterns |
+| Disguised Intent | "For academic research only…" | Linguistic + semantic |
 
 ---
 
 ## 📂 Repository Structure
 
 ```
-├── flooding2.py        # Main detection system
-├── README.md           # Documentation
-└── requirements.txt    # Dependencies
+jails/
+├── flooding2.py          # Main detection engine & training logic
+├── multi10.py            # Feature extraction & pattern analysis
+├── classifier/
+│   └── models/           # Trained model artifacts (joblib)
+├── README.md
+└── requirements.txt
 ```
 
 ---
 
-## 🚀 How to Run
+## 🚀 Quick Start
 
-### Install dependencies
+### 1️⃣ Installation
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run the detector
+### 2️⃣ Run the detector
 ```bash
 python flooding2.py
 ```
 
-The script includes example training data and test prompts.
+The script demonstrates:
+- Model training
+- Evaluation metrics
+- Sample prompt classification
+
+---
+
+## 📈 Model Outputs
+
+For each prompt, JAILS produces:
+- Classification: `SAFE` or `JAILBREAK`
+- Confidence score
+- Risk / threat level
+- Feature-based reasoning signals
+
+This makes the system **interpretable**, not a black box.
 
 ---
 
 ## 🧠 What This Project Demonstrates
 
-- Understanding of **LLM safety vulnerabilities**
-- Hybrid detection (rules + ML + semantics)
+- Understanding of LLM jailbreak & prompt-injection risks
+- Hybrid detection (rules + ML + statistics)
 - Feature engineering for NLP security
-- Generalization beyond keyword matching
-- Research-oriented system design
+- Anomaly detection for unseen attacks
+- Research-style experimentation with classifiers
 
 ---
 
-## 🔮 Future Work
+## ⚠️ Disclaimer
 
-- Jailbreak taxonomy classification  
-- FAISS-based semantic retrieval  
-- Continual / online learning  
-- Integration with live LLM APIs  
-
----
-
-## 📄 Disclaimer
-
-This project is intended for **research and educational use only**.  
+This project is an **experimental prototype** intended for **learning and research purposes**.
 It is **not a production-ready security system**.
 
 ---
 
-## 👤 Author
+## 📄 License
 
-Developed by **Zibran**  
-Research focus: **LLM Safety & Alignment**
+MIT License
