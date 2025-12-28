@@ -52,7 +52,7 @@ SAFE / JAILBREAK
 - Pattern matching: instruction overrides, role-play triggers, coercion
 - Statistical signals: TF-IDF similarity, clustering, anomaly detection
 
-### 🎛️ Machine-Learning Pipeline
+### Machine-Learning Pipeline
 - Feature scaling and preprocessing
 - Supervised classifiers:
   - Gradient Boosting (primary)
